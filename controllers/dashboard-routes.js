@@ -38,7 +38,6 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
-
   router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
       where: {
@@ -82,7 +81,6 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
 });
-
 router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
@@ -118,6 +116,5 @@ router.get('/create/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
-
 
 module.exports = router;

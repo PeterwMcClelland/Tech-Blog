@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
 });
-
 router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Comment.create({
